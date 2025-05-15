@@ -24,7 +24,7 @@
     // $counter += 5;
     $counter -= 5;
 
-    echo "$counter"
+    echo $counter;
 
     // operator precedence
 
