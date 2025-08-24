@@ -1,10 +1,13 @@
 <?php 
-    $db_server = "127.0.0.1";
-    $db_user = "root";
-    $db_password = "mysql12345**";
-    $db_name = "php_db";   # database
 
-    $conn = mysqli_connect($db_server,$db_user,$db_password,$db_name);
+    require __DIR__ . "/config.php";
+
+    $conn = mysqli_connect(
+        $config["database"]["db_server"],
+        $config["database"]["db_user"],
+        $config["database"]["db_password"],
+        $config["database"]["db_name"]
+    );
 
     if ($conn) {
         echo "You are Connected";
@@ -13,7 +16,7 @@
     }
 
     $sql = "INSERT INTO users(user,password)
-            VALUES ('HariPrasad2','sadsad123')
+            VALUES ('HariPrasad','sadsad123')
             ";
     
     try {

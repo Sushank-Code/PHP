@@ -1,11 +1,13 @@
 <?php 
     // Connection
-    $db_server = "127.0.0.1";
-    $db_user = "root";
-    $db_password = "mysql12345**";
-    $db_name = "php_db";   # database
+    require __DIR__ . "/config.php";
 
-    $conn = mysqli_connect($db_server,$db_user,$db_password,$db_name);
+    $conn = mysqli_connect(
+        $config["database"]["db_server"],
+        $config["database"]["db_user"],
+        $config["database"]["db_password"],
+        $config["database"]["db_name"]
+    );
 
     // Retrieving
     // $sql = "SELECT * FROM users WHERE user = 'HariPrasadsadsad'

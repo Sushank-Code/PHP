@@ -1,5 +1,6 @@
 <?php 
     $game_genre = array("action","fantasy","fictional","hero_shooter");
+    // $game_genre = ["action","fantasy","fictional","hero_shooter"];
 
     // Accessing 1 element of array  
 
